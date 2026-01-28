@@ -66,7 +66,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="container mx-auto flex items-center justify-between">
+    <header className="container mx-auto flex items-center justify-between px-4">
       <Link to="/" aria-label="Home">
         <Logo width={96} height={96} />
       </Link>

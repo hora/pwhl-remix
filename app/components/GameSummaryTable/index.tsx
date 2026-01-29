@@ -18,7 +18,7 @@ export const GameSummaryTable = ({
 
   return (
     <table className="my-5 min-w-full border border-pwhl-purple-50 text-center md:w-80 md:min-w-min lg:w-96 dark:border-pwhl-light-purple-50">
-      <thead className="bg-pwhl-purple-50 font-bold text-white dark:border-pwhl-light-purple-50 ">
+      <thead className="bg-pwhl-purple-50 font-bold text-white dark:bg-pwhl-light-purple-50 ">
         <tr>
           <TableCell>Team</TableCell>
           {gameStats.periods.map((p) => (

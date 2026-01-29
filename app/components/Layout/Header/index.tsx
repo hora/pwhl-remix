@@ -2,7 +2,7 @@ import { Link, NavLink, useLoaderData } from "@remix-run/react";
 import { Button } from "react-aria-components";
 import Logo from "~/components/icons/PwhlLogo";
 import type { WithBootstrap } from "~/components/types";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const linkClass =
   "text-lg transition-opacity hover:opacity-70 border-b-2 border-transparent hover:border-pwhl-purple-50 dark:hover:border-pwhl-light-purple-50";
@@ -30,8 +30,6 @@ const SUN_EMOJI = "☀";
 const MOON_EMOJI = "🌙";
 
 export const Header = () => {
-  const [themeToggleIcon, setThemeToggleIcon] = useState(MOON_EMOJI);
-
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -48,21 +46,17 @@ export const Header = () => {
       "dark",
       localStorage.getItem("theme") === "dark"
     );
-    setThemeToggleIcon(
-      localStorage.getItem("theme") === "dark" ? SUN_EMOJI : MOON_EMOJI
-    );
   });
 
   const onToggleTheme = () => {
     localStorage.setItem(
       "theme",
-      themeToggleIcon === MOON_EMOJI ? "dark" : "light"
+      localStorage.getItem("theme") === "dark" ? "light" : "dark"
     );
     document.documentElement.classList.toggle(
       "dark",
-      themeToggleIcon === MOON_EMOJI
+      localStorage.getItem("theme") === "dark"
     );
-    setThemeToggleIcon(themeToggleIcon === MOON_EMOJI ? SUN_EMOJI : MOON_EMOJI);
   };
 
   return (
@@ -71,7 +65,9 @@ export const Header = () => {
         <Logo
           width={96}
           height={96}
-          fill={themeToggleIcon === SUN_EMOJI ? "#845bd4" : "#33058d"}
+          fill={
+            localStorage.getItem("theme") === "dark" ? "#845bd4" : "#33058d"
+          }
         />
       </Link>
       <nav className="flex gap-6">
@@ -88,7 +84,9 @@ export const Header = () => {
           Standings
         </NavLink>
         <PlayoffsLink />
-        <Button onPress={onToggleTheme}>{themeToggleIcon}</Button>
+        <Button onPress={onToggleTheme}>
+          {localStorage.getItem("theme") === "dark" ? SUN_EMOJI : MOON_EMOJI}
+        </Button>
       </nav>
     </header>
   );

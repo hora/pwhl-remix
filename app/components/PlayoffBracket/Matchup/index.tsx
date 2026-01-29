@@ -8,7 +8,7 @@ type MatchupProps = {
 
 export const Matchup = ({ matchup }: MatchupProps) => {
   return (
-    <div className="flex gap-2 rounded-lg border border-pwhl-purple-50 p-6">
+    <div className="flex gap-2 rounded-lg border border-pwhl-purple-50 p-6 dark:border-pwhl-light-purple-50">
       <div className="flex w-1/3 flex-col items-center text-center">
         <TeamLogo
           logoUrl={matchup.highSeed.logo}

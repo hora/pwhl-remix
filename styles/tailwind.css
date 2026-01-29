@@ -15,6 +15,6 @@
 
 @layer components {
   .bg-layout {
-    @apply flex min-h-screen flex-col text-black before:absolute before:h-full before:w-full before:bg-center before:bg-no-repeat before:opacity-50 before:blur-[105px] before:content-[''];
+    @apply flex min-h-screen flex-col text-black before:absolute before:h-full before:w-full before:bg-center before:bg-no-repeat before:opacity-50 before:blur-[105px] before:content-[''] dark:text-neutral-50;
   }
 }

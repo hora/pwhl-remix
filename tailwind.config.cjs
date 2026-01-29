@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "selector",
   theme: {
     extend: {
       animation: {
@@ -10,12 +11,18 @@ module.exports = {
         "pwhl-purple": {
           50: "#33058d",
         },
+        "pwhl-light-purple": {
+          50: "#845bd4",
+        },
         blue: {
           1000: "#5963b3",
         },
         red: {
           750: "#AF1E2D",
         },
+      },
+      dropShadow: {
+        "lg-dark": "0 10px 18px rgba(255, 255, 255, 0.1)",
       },
       gridTemplateColumns: {
         "auto-fill": "repeat(auto-fill, minmax(320px, 1fr))",

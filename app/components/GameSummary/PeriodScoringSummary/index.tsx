@@ -13,7 +13,7 @@ export const PeriodScoringSummary = ({
 }: PeriodScoringSummaryProps): JSX.Element => {
   return (
     <>
-      <div className="my-5 border-b-2 border-pwhl-purple-50 bg-pwhl-purple-50 px-6 py-3 font-bold text-white">
+      <div className="my-5 border-b-2 border-pwhl-purple-50 bg-pwhl-purple-50 px-6 py-3 font-bold text-white dark:border-pwhl-light-purple-50 dark:bg-pwhl-light-purple-50 dark:text-neutral-50">
         <PeriodOrdinal period={periodNumber} /> period
       </div>
       <ScoringPlayList scoringPlays={scoringPlays} />

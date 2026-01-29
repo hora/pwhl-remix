@@ -8,7 +8,7 @@ export const Footer = () => (
         href="https://github.com/smoak"
         target="_blank"
         rel="noreferrer"
-        className="border-b-blue-500 text-blue-1000 hover:border-b-[1px]"
+        className="border-b-blue-500 text-blue-1000 hover:border-b-[1px] dark:text-blue-400"
       >
         Sasha Moak
       </a>

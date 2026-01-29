@@ -21,7 +21,7 @@ const SkeletonContents = () => {
 
 export const Skeleton = () => {
   return (
-    <div className="flex h-36 rounded-lg border border-pwhl-purple-50">
+    <div className="flex h-36 rounded-lg border border-pwhl-purple-50 dark:border-pwhl-light-purple-50">
       <div className="flex w-full animate-pulse p-8">
         <SkeletonContents />
       </div>

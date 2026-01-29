@@ -44,22 +44,22 @@ export const Picker = ({ date, onDateChanged }: PickerProps) => {
       onChange={onDateChanged}
       aria-label="Date"
     >
-      <Group className="flex rounded-lg border border-pwhl-purple-50 pl-3 text-gray-700 ring-black transition group-open:bg-white focus-within:bg-white focus-visible:ring-2">
+      <Group className="flex rounded-lg border border-pwhl-purple-50 pl-3 text-gray-700 ring-black transition group-open:bg-white focus-within:bg-white focus-visible:ring-2 dark:border-pwhl-light-purple-50 dark:text-neutral-50 dark:group-open:bg-neutral-800 dark:focus-within:bg-neutral-800">
         <DateInput className="flex flex-1 py-2">
           {(segment) => (
             <DateSegment
               segment={segment}
-              className="rounded-sm px-0.5 tabular-nums caret-transparent outline-none placeholder-shown:italic focus:bg-pwhl-purple-50 focus:text-white"
+              className="rounded-sm px-0.5 tabular-nums caret-transparent outline-none placeholder-shown:italic focus:bg-pwhl-purple-50 focus:text-white dark:focus:bg-pwhl-light-purple-50 dark:focus:text-black"
             />
           )}
         </DateInput>
-        <Button className="flex items-center rounded-r-lg border-0 border-l border-solid bg-transparent px-3 text-gray-700 outline-none ring-black transition focus-visible:ring-2 pressed:bg-pwhl-purple-50 pressed:text-white">
+        <Button className="flex items-center rounded-r-lg border-0 border-l border-solid bg-transparent px-3 text-gray-700 outline-none ring-black transition focus-visible:ring-2 pressed:bg-pwhl-purple-50 pressed:text-white dark:text-black dark:text-neutral-50 dark:pressed:bg-pwhl-light-purple-50">
           <ChevronUpDownIcon className="w-4" />
         </Button>
       </Group>
-      <Popover className="overflow-auto rounded-lg bg-white ring-1 ring-black/10 drop-shadow-lg">
+      <Popover className="overflow-auto rounded-lg bg-white ring-1 ring-black/10 drop-shadow-lg dark:bg-neutral-800 dark:drop-shadow-lg-dark">
         <Dialog className="p-6">
-          <Calendar>
+          <Calendar className="dark:bg-neutral-800">
             <header className="flex w-full items-center gap-1 px-1 pb-4">
               <Heading className="ml-2 flex-1 text-2xl font-semibold" />
               <RoundButton slot="previous">
@@ -81,7 +81,7 @@ export const Picker = ({ date, onDateChanged }: PickerProps) => {
                 {(date) => (
                   <CalendarCell
                     date={date}
-                    className="ring-black-600/70 flex h-9 w-9 cursor-default items-center justify-center rounded-full outline-none ring-offset-2 outside-month:text-gray-300 hover:bg-gray-200 focus-visible:ring pressed:bg-gray-200 selected:bg-black selected:bg-pwhl-purple-50 selected:text-white"
+                    className="ring-black-600/70 flex h-9 w-9 cursor-default items-center justify-center rounded-full outline-none ring-offset-2 outside-month:text-black outside-month:text-gray-300 hover:bg-gray-200 focus-visible:ring pressed:bg-gray-200 selected:bg-black selected:bg-pwhl-purple-50 selected:text-white dark:hover:bg-gray-400 dark:selected:bg-pwhl-light-purple-50"
                   />
                 )}
               </CalendarGridBody>

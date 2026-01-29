@@ -12,7 +12,7 @@ const Cell = ({ children, className }: CellProps) => {
     <div
       className={`${
         className != null ? className : ""
-      } table-cell border-b border-pwhl-purple-50 align-middle`}
+      } table-cell border-b border-pwhl-purple-50 align-middle dark:border-pwhl-light-purple-50`}
     >
       {children}
     </div>
@@ -25,7 +25,7 @@ export const LeagueStandings = () => {
   return (
     <div className="inline-flex w-full flex-col gap-8">
       <section className="table w-full">
-        <header className="table-header-group h-8 bg-pwhl-purple-50 text-center text-white">
+        <header className="table-header-group h-8 bg-pwhl-purple-50 text-center text-white dark:bg-pwhl-light-purple-50 dark:text-neutral-50">
           <div className="table-row">
             <div className="table-cell align-middle font-bold">Rank</div>
             <div className="table-cell align-middle font-bold">Team</div>

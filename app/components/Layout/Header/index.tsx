@@ -5,9 +5,9 @@ import type { WithBootstrap } from "~/components/types";
 import { useEffect, useState } from "react";
 
 const linkClass =
-  "text-lg transition-opacity hover:opacity-70 border-b-2 border-transparent hover:border-pwhl-purple-50";
+  "text-lg transition-opacity hover:opacity-70 border-b-2 border-transparent hover:border-pwhl-purple-50 dark:hover:border-pwhl-light-purple-50";
 const activeLinkClass =
-  "text-lg transition-opacity hover:opacity-70 border-b-2 border-pwhl-purple-50";
+  "text-lg transition-opacity hover:opacity-70 border-b-2 border-pwhl-purple-50 dark:border-pwhl-light-purple-50";
 
 const PlayoffsLink = () => {
   const { playoffsStarted } = useLoaderData<WithBootstrap<unknown>>();
@@ -33,7 +33,7 @@ export const Header = () => {
   const [themeToggleIcon, setThemeToggleIcon] = useState(MOON_EMOJI);
 
   useEffect(() => {
-    if (typeof window === undefined) return;
+    if (typeof window === "undefined") return;
 
     if (!("theme" in localStorage)) {
       localStorage.setItem(
@@ -68,7 +68,11 @@ export const Header = () => {
   return (
     <header className="container mx-auto flex items-center justify-between px-4">
       <Link to="/" aria-label="Home">
-        <Logo width={96} height={96} />
+        <Logo
+          width={96}
+          height={96}
+          fill={themeToggleIcon === SUN_EMOJI ? "#845bd4" : "#33058d"}
+        />
       </Link>
       <nav className="flex gap-6">
         <NavLink

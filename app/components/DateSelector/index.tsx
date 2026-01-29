@@ -27,7 +27,7 @@ export const DateSelector = ({ day, nextDay, prevDay }: DateSelectorProps) => {
           to={prevDayLink}
           aria-label="previous day"
         >
-          <ArrowLeftIcon className="h-5 w-5 text-black" />
+          <ArrowLeftIcon className="h-5 w-5 text-black dark:text-neutral-50" />
         </Link>
         <Picker date={day} onDateChanged={onDateChanged} />
         <Link
@@ -36,7 +36,7 @@ export const DateSelector = ({ day, nextDay, prevDay }: DateSelectorProps) => {
           to={nextDayLink}
           aria-label="next day"
         >
-          <ArrowRightIcon className="h-5 w-5 text-black" />
+          <ArrowRightIcon className="h-5 w-5 text-black dark:text-neutral-50" />
         </Link>
       </div>
     </div>

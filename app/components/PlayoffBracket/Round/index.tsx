@@ -11,7 +11,7 @@ export const Round = ({ round }: RoundProps) => {
   if (matchups.length === 0) {
     return (
       <div className="my-3 flex flex-col gap-2">
-        <div className="border-b-2 border-pwhl-purple-50 bg-pwhl-purple-50 px-6 py-3 font-bold text-white">
+        <div className="border-b-2 border-pwhl-purple-50 bg-pwhl-purple-50 px-6 py-3 font-bold text-white dark:bg-pwhl-light-purple-50 dark:text-neutral-50">
           {round.name}
         </div>
         <div className="flex justify-center font-bold">Series not started</div>
@@ -21,7 +21,7 @@ export const Round = ({ round }: RoundProps) => {
 
   return (
     <div className="my-3 flex flex-col gap-2">
-      <div className="border-b-2 border-pwhl-purple-50 bg-pwhl-purple-50 px-6 py-3 font-bold text-white">
+      <div className="border-b-2 border-pwhl-purple-50 bg-pwhl-purple-50 px-6 py-3 font-bold text-white dark:bg-pwhl-light-purple-50">
         {round.name}
       </div>
       {matchups.map((matchup) => (

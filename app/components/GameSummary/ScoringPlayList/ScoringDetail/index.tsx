@@ -23,7 +23,7 @@ export const ScoringDetail = ({
 
   return (
     <div className="flex flex-col pb-4">
-      <div className="flex flex-col gap-2 rounded-lg border border-pwhl-purple-50 bg-white p-4">
+      <div className="flex flex-col gap-2 rounded-lg border border-pwhl-purple-50 bg-white p-4 dark:border-pwhl-light-purple-50 dark:bg-neutral-800">
         <div className="flex items-center gap-2">
           <PlayerAvatar
             headshotUrl={goalScorer.headshotUrl}
